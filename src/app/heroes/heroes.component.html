@@ -1,7 +1,17 @@
 
 
-<div>
-  <h2>My List of Heroes</h2>
+
+<h2>My List of Heroes</h2>
+  <div>
+    <label>Hero name:
+      <input #heroName />
+    </label>
+    <!-- (click) passes input value to add() and then clears the input -->
+    <button (click)="add(heroName.value); heroName.value=''">
+      add
+    </button>
+  </div>
+
   <ul class="heroes">
     <!--hero holds the current hero object for each iteration
     parens around click tells angular to listen to li element's click
@@ -11,9 +21,11 @@
       <span class="badgeID">{{hero.id}}</span>
       <span class="badgeName">{{hero.name}}</span>
       </a>
+      <button class="delete" title="delete hero"
+              (click)="delete(hero)">x</button>
     </li>
   </ul>
-</div>
+
 
 <!--This is one way data binding from the selectedHero property
  of the HeroesComponent to the hero property of the target
