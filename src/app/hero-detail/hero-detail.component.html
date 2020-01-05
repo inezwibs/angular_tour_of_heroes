@@ -1,7 +1,7 @@
 
 <div *ngIf="hero">
   <h2>{{ hero.name | uppercase }} Details</h2>
-
+  <p *ngIf="hero.details">{{ hero.details | summary: 30 }}</p>
   <div><span>id: </span>{{ hero.id }}</div>
 
   <div>

@@ -16,13 +16,16 @@
     <!--hero holds the current hero object for each iteration
     parens around click tells angular to listen to li element's click
     event, when a click is detected angular execute onSelect-->
-    <li *ngFor="let hero of heroes" >
+    <li class="heroes-detail" *ngFor="let hero of heroes" >
       <a routerLink="/detail/{{hero.id}}">
       <span class="badgeID">{{hero.id}}</span>
       <span class="badgeName">{{hero.name}}</span>
       </a>
       <button class="delete" title="delete hero"
               (click)="delete(hero)">x</button>
+
+      <favorite>works</favorite>
+
     </li>
   </ul>
 

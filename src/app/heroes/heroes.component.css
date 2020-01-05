@@ -66,6 +66,7 @@ button {
 
 button:hover {
   background-color: #cfd8dc;
+  color: #336699;
 }
 
 button.delete {
@@ -75,3 +76,4 @@ button.delete {
   background-color: gray !important;
   color: white;
 }
+
