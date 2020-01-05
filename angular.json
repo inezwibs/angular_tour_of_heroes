@@ -153,8 +153,13 @@
               "devServerTarget": "my-app:serve:qa"
             }
           }
+        },
+        "deploy": {
+          "builder": "angular-cli-ghpages:deploy",
+          "options": {}
         }
       }
-    }},
+    }
+  },
   "defaultProject": "my-app"
 }
